@@ -10,24 +10,24 @@ $(document).ready(function(){
 		salary = $('#salary').val();
 
 		function Employee(firstname, lastname, empNum, title, lastRev, salary) {
-	   		this.firstname = firstname;
-	   		this.lastname = lastname;
-	   		this.employeeNumber = empNum;
-	   		this.title = title;
-	   		this.lastReview = lastRev;
-	   		this.salary = salary;
+	   		this["First Name"] = firstname;
+	   		this["Last Name"] = lastname;
+	   		this["Employee Number"] = empNum;
+	   		this["Title"] = title;
+	   		this["Last Review Rating"]= lastRev;
+	   		this["Current Salary"] = salary;
 	   		};
 
+		
 		var employee = new Employee(firstname, lastname, empNum, title, lastRev, salary);
 
-			console.log(employee);
+		for (var key in employee) {
+		var $p =$('<p>');
+		$p.text(key + " : " + employee[key]);
+		$('aside').append($p);
+		};
 
-			//return(employee);
-
-		var $li =$('<li>');
-		$li.text(employee.firstname + " " + employee.lastname);
-		$('ul').append($li);
-
+		console.log(employee);
 		});
 });
 
