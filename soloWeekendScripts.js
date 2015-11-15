@@ -80,9 +80,8 @@ $(document).ready(function(){
 //it in an object that can be called in our display function
 	$('form').on('submit', function(event){
 		event.preventDefault();
+		
 		newEmployee = $(this).serializeArray();
-	
-		console.log(newEmployee);
 
 		displayEmployeeInfo(newEmployee);
 
@@ -105,12 +104,21 @@ var currentEmployee = [];
 //these need to be refactored to match the form fields
 //then try serializeArray
  	function EmployeeCreator(firstname, lastname, empNum, title, lastRev, salary) {
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.empNum = empNum;
-		this.title = title;
-		this.lastRev = lastRev;
-		this.salary = salary;
+		this["First Name"] = firstname;
+		this["Last Name"] = lastname;
+		this["Employee Number"]	= empNum;
+		this["Title"] = title;
+		this["Last Review"] = lastRev;
+		this["Salary"] = salary;
 	};
+
+	var currentEmployee = new EmployeeCreator("Sherman", "Bausch", 1234, "Developer", 5, 10);
+
+	console.log(currentEmployee);
+
+	var sherman = $(currentEmployee).serializeArray();
+
+	console.log(sherman);
+
 
 		

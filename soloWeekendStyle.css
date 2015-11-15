@@ -19,28 +19,56 @@
 	color: blue;
 }
 
-section {
+.form {
+	background-color: blue;
+	width: 45%;
+	float: left;
+}
+
+.listing {
+	background-color: green;
+	width: 45%;
+	float: right;
+	border: solid 5px;
+}
+
+.formfn {
 
 
 }
 
-aside {
-	
-	
-}
-
-div {
+.formln {
 
 
 }
 
-label {
+.empnum {
 
 
 }
 
-form {
+.title {
 
 
+}
+
+.lastrev {
+
+
+}
+
+.salary {
+
+
+}
+
+.submit {
+
+
+}
+
+.page {
+	background-color: grey;
+	width: 960px;
 }
 
