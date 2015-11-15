@@ -61,8 +61,6 @@ $(document).ready(function(){
 	          };
 	          // Append the wrapper to the DOM
 
-	      // $(this).find(".detail").remove()
-
 		$container.appendTo('aside');
 
 
