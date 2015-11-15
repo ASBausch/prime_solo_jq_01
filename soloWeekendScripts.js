@@ -1,18 +1,12 @@
 $(document).ready(function(){
-	//retireveing form data in order to create new employee objects	
-
-	$('form').on('submit', function(event){
-		event.preventDefault();
-		employees = $(this).serializeArray();
 	
-		console.log(employees);
+//writes employee information to the DOM including removal button
+	var displayEmployeeInfo= function(employee){
 
 		var $container = $('<div>');
-		
-		//we need proper syntax and classes for our properties	
-		
-		for (var i = 0; i < employees.length; i++){
-	        var elem = employees[i];
+
+		for (var i = 0; i < employee.length; i++){
+	        var elem = employee[i];
 			var $p =$('<p class="gone"> ');
 	        var $but = $('<button type="button">Remove Employee</button>');
 
@@ -68,8 +62,36 @@ $(document).ready(function(){
   			$(this).parent().remove();
 		});
 
+	};
+
+	$('form').on('submit', function(event){
+		event.preventDefault();
+		newEmployee = $(this).serializeArray();
+	
+		console.log(newEmployee);
+
+		displayEmployeeInfo(newEmployee);
+
 	});
 
-});
+
+var currentEmployee = [];
+	currentEmployee.push(new EmployeeCreator("Sherman", "Bausch", 1234, "Developer", 5, 10));
+	currentEmployee.push(new EmployeeCreator("Amanda", "Bausch", 2234, "Student", 1, 1));
+	currentEmployee.push(new EmployeeCreator("Elijah", "Bausch", 3334, "Pro Gamer", 5, 25));
+
+	console.log(currentEmployee);
+
+	});
+
+
+ 	function EmployeeCreator(firstname, lastname, empNum, title, lastRev, salary) {
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.empNum = empNum;
+		this.title = title;
+		this.lastRev = lastRev;
+		this.salary = salary;
+	};
 
 		
