@@ -8,12 +8,12 @@ $(document).ready(function(){
 		console.log(employees);
 
 		var $container = $('<div>');
+		
 		//we need proper syntax and classes for our properties	
+		
 		for (var i = 0; i < employees.length; i++){
 	        var elem = employees[i];
-			// We need a wrapper for each set of properties
-	        // from our object
-			var $p =$('<p>');
+			var $p =$('<p class="gone"> ');
 	        var $but = $('<button type="button">Remove Employee</button>');
 
 	        if (elem.name=="First Name"){
@@ -61,16 +61,17 @@ $(document).ready(function(){
 	          };
 	          // Append the wrapper to the DOM
 
-	       $('button').on( "click", function() {
-	  	   $this.remove();
-		});
+	      // $(this).find(".detail").remove()
 
-       	//$('aside').append($container);
 		$container.appendTo('aside');
 
-      });
 
+		$('button').on( "click", function() {
+  			$(this).parent().remove();
+		});
 
 	});
+
+});
 
 		
