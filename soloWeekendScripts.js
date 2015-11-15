@@ -1,3 +1,5 @@
+var employeeArray = [];
+
 $(document).ready(function(){
 	
 //writes employee information to the DOM including removal button
@@ -5,7 +7,7 @@ $(document).ready(function(){
 
 
 //we need a container to hold each new employee information
-		var $container = $('<div>');
+		var $container = $('<div class="individual">');
 
 
 //we need to loop through each employee object name/value pair 
@@ -14,7 +16,7 @@ $(document).ready(function(){
 //we need variables for the point in the employee array
 //the element we will append and a remove button
 	        var elem = employee[i];
-			var $p =$('<p class="gone"> ');
+			var $p =$('<p> ');
 	        var $but = $('<button type="button">Remove Employee</button>');
 
 	        if (elem.name=="First Name"){
@@ -76,49 +78,31 @@ $(document).ready(function(){
 	};
 
 
+
 //we need to take the data the is input into the form and store 
 //it in an object that can be called in our display function
 	$('form').on('submit', function(event){
 		event.preventDefault();
 		
-		newEmployee = $(this).serializeArray();
+		var newEmployee = $(this).serializeArray();
 
 		displayEmployeeInfo(newEmployee);
 
-	});
+		employeeArray.push(newEmployee);
 
-
-//we need to create employee objects that can be automaticlly written
-//to the page then push them into an array that can be fed to the display
-//function
-
-var currentEmployee = [];
-	currentEmployee.push(new EmployeeCreator("Sherman", "Bausch", 1234, "Developer", 5, 10));
-	currentEmployee.push(new EmployeeCreator("Amanda", "Bausch", 2234, "Student", 1, 1));
-	currentEmployee.push(new EmployeeCreator("Elijah", "Bausch", 3334, "Pro Gamer", 5, 25));
-
-	console.log(currentEmployee);
+		console.log(employeeArray);
 
 	});
+});
 
-//these need to be refactored to match the form fields
-//then try serializeArray
- 	function EmployeeCreator(firstname, lastname, empNum, title, lastRev, salary) {
-		this["First Name"] = firstname;
-		this["Last Name"] = lastname;
-		this["Employee Number"]	= empNum;
-		this["Title"] = title;
-		this["Last Review"] = lastRev;
-		this["Salary"] = salary;
-	};
+//this will take a serialized array from our arrays and turns it into an object
+//var currentEmployee = new EmployeeCreator(newEmployee[0].value, newEmployee[1].value, newEmployee[2].value, newEmployee[3].value, newEmployee[4].value, newEmployee[5].value);
 
-	var currentEmployee = new EmployeeCreator("Sherman", "Bausch", 1234, "Developer", 5, 10);
-
-	console.log(currentEmployee);
-
-	var sherman = $(currentEmployee).serializeArray();
-
-	console.log(sherman);
-
-
-		
+//function EmployeeCreator(firstname, lastname, empNum, title, lastRev, salary) {
+//		this["First Name"] = firstname;
+//		this["Last Name"] = lastname;
+//		this["Employee Number"]	= empNum;
+//		this["Title"] = title;
+//		this["Last Review"] = lastRev;
+//		this["Salary"] = salary;
+//	};

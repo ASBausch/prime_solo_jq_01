@@ -20,55 +20,69 @@
 }
 
 .form {
-	background-color: blue;
+	background-color: grey;
 	width: 45%;
 	float: left;
+	font-family: sans-serif;
+
 }
 
 .listing {
+	font-family: sans-serif;
 	background-color: green;
 	width: 45%;
 	float: right;
-	border: solid 5px;
+}
+
+.individual {
+	padding: 6px;
+	margin: 3px;
+	border-radius: 10px;
+	background-color: grey;
+	border: solid 2px;
+
 }
 
 .formfn {
-
-
+	margin: 4px;
+	padding: 4px;
 }
 
 .formln {
-
-
+	margin: 4px;
+	padding: 4px;
 }
 
 .empnum {
-
-
+	margin: 4px;
+	padding: 4px;
 }
 
 .title {
-
-
+	margin: 4px;
+	padding: 4px;
 }
 
 .lastrev {
-
-
+	margin: 4px;
+	padding: 4px;
 }
 
 .salary {
-
-
+	margin: 4px;
+	padding: 4px;
 }
 
 .submit {
-
-
+	margin: 4px;
+	padding: 4px;
 }
 
 .page {
-	background-color: grey;
+	background-color: red;
 	width: 960px;
+	display: block;
+	margin: auto;
+	z-index: -1;
 }
 
