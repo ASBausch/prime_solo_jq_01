@@ -1,3 +1,5 @@
+//please refactor for brevity
+
 var employeeArray = [];
 
 $(document).ready(function(){
@@ -111,17 +113,3 @@ $(document).ready(function(){
 
 
 
-
-//loop through array
-
-//this will take a serialized array from our arrays and turns it into an object
-//var currentEmployee = new EmployeeCreator(newEmployee[0].value, newEmployee[1].value, newEmployee[2].value, newEmployee[3].value, newEmployee[4].value, newEmployee[5].value);
-
-//function EmployeeCreator(firstname, lastname, empNum, title, lastRev, salary) {
-//		this["First Name"] = firstname;
-//		this["Last Name"] = lastname;
-//		this["Employee Number"]	= empNum;
-//		this["Title"] = title;
-//		this["Last Review"] = lastRev;
-//		this["Salary"] = salary;
-//	};
