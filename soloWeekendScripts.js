@@ -88,7 +88,6 @@ $(document).ready(function(){
 	});
 
 ///leave everything above here alone
-
 	function EmployeeCreator(firstname, lastname, empNum, title, lastRev, salary) {
 		this["First Name"] = firstname;
 		this["Last Name"] = lastname;
