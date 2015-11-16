@@ -1,4 +1,6 @@
 
+/*All of this needs to be refactored for repitition*/
+
 .one {
 	color: #A79100;
 }
@@ -111,4 +113,5 @@ header {
 button {
 	margin-bottom: 12px;
 }
+
 
