@@ -85,7 +85,6 @@ $(document).ready(function(){
 		employeeArray.push(objectEmployee);
 //logs employee Array
 		console.log(employeeArray);
-
 	});
 
 ///leave everything above here alone
