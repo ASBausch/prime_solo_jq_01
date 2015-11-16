@@ -5,13 +5,9 @@ var employeeArray = [];
 $(document).ready(function(){
 	
 //writes employee information to the DOM including removal button
-	var displayEmployeeInfo= function(employee){
-
-
+		var displayEmployeeInfo= function(employee){
 //we need a container to hold each new employee information
 		var $container = $('<div class="individual">');
-
-
 //we need to loop through each employee object name/value pair 
 //and set the value to display and add them to the DOM
 		for (var i = 0; i < employee.length; i++){
@@ -68,18 +64,13 @@ $(document).ready(function(){
 	          	}
 	          };
 // we need to append the individual containers to an element in the DOM
-
 		$container.appendTo('aside');
-
 //we need the remove button to remove it's parent container
-
 		$('button').on( "click", function() {
   			$(this).parent().remove();
 		});
 //the loop ends here
 	};
-
-
 
 //we need to create an event caller for the form
 	$('form').on('submit', function(event){
@@ -96,7 +87,6 @@ $(document).ready(function(){
 		console.log(employeeArray);
 
 	});
-
 
 ///leave everything above here alone
 
