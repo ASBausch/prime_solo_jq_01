@@ -37,14 +37,22 @@
 	width: 45%;
 	float: right;
 	font-family: 'Exo', sans-serif;
-	font-weight: 800;
+	font-weight: 400;
 }
 
 .individual {
-	padding: 2px;
+	background-color: #81A7D3;
+	font-family: 'Exo', sans-serif;
+	padding: 8px 0px 0px 8px;
 	margin: 3px;
 	border-radius: 10px;
-	color: white;
+	border: solid 2px;
+	border-color: white;
+	line-height: 70%;
+}
+
+p {
+	padding-left: 8px;
 }
 
 .formfn {
@@ -98,5 +106,9 @@ header {
 	margin:8px;
 	padding: 20px 0 15px 0;
 
+}
+
+button {
+	margin-bottom: 12px;
 }
 

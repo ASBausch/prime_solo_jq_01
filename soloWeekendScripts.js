@@ -79,21 +79,40 @@ $(document).ready(function(){
 
 
 
-//we need to take the data the is input into the form and store 
-//it in an object that can be called in our display function
+//we need to create an event caller for the form
 	$('form').on('submit', function(event){
 		event.preventDefault();
-		
+//we create a serialized array to use in appending to the DOM		
 		var newEmployee = $(this).serializeArray();
-
+//function needs to take serialized array in and append DOM
 		displayEmployeeInfo(newEmployee);
-
-		employeeArray.push(newEmployee);
-
+//creates a new employee object from serialized array
+		var objectEmployee = new EmployeeCreator(newEmployee[0].value, newEmployee[1].value, newEmployee[2].value, newEmployee[3].value, newEmployee[4].value, newEmployee[5].value);
+//push objects created to the employee array		
+		employeeArray.push(objectEmployee);
+//logs employee Array
 		console.log(employeeArray);
 
 	});
+
+
+///leave everything above here alone
+
+	function EmployeeCreator(firstname, lastname, empNum, title, lastRev, salary) {
+		this["First Name"] = firstname;
+		this["Last Name"] = lastname;
+		this["Employee Number"]	= empNum;
+		this["Title"] = title;
+		this["Last Review"] = lastRev;
+		this["Salary"] = salary;
+	};
+
 });
+
+
+
+
+//loop through array
 
 //this will take a serialized array from our arrays and turns it into an object
 //var currentEmployee = new EmployeeCreator(newEmployee[0].value, newEmployee[1].value, newEmployee[2].value, newEmployee[3].value, newEmployee[4].value, newEmployee[5].value);
