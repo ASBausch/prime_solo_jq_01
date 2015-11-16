@@ -17,7 +17,7 @@ $(document).ready(function(){
 //the element we will append and a remove button
 	        var elem = employee[i];
 			var $p =$('<p> ');
-	        var $but = $('<button type="button">Remove Employee</button>');
+	        var $but = $('<button type="submit">Remove Employee</button>');
 
 	        if (elem.name=="First Name"){
 	        	$p.text(elem.name + ": " + elem.value);
