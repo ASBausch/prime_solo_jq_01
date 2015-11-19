@@ -1,6 +1,43 @@
 
 /*All of this needs to be refactored for repitition*/
+body {
+	width: 960px;
+	height: auto;
+	display: block;
+	margin: auto;
+	z-index: -1;
+	background-image: url(bluesun.jpg);;
+	background-repeat: no-repeat;
+	background-color: #2C40A0;
+}
 
+header {
+	font-size: 56px;
+	font-family: 'Exo', sans-serif;
+	margin:8px;
+	padding: 20px 0 15px 0;
+
+}
+
+button {
+	margin: 12px 0 4px 0;
+}
+
+ul {
+		float: right;
+		background-color: #81A7D3;
+		font-family: 'Exo', sans-serif;
+		padding: 10px;
+		margin: 6px;
+		border-radius: 10px;
+		border: solid 2px;
+		border-color: white;
+		line-height: 100%;
+	}
+
+li {
+	list-style: none;
+}
 .one {
 	color: #A79100;
 }
@@ -31,8 +68,6 @@
 	border-radius: 10px;
 	border: solid 2px;
 	border-color: white;
-
-
 }
 
 .listing {
@@ -40,21 +75,6 @@
 	float: right;
 	font-family: 'Exo', sans-serif;
 	font-weight: 400;
-}
-
-.individual {
-	background-color: #81A7D3;
-	font-family: 'Exo', sans-serif;
-	padding: 8px 0px 0px 8px;
-	margin: 3px;
-	border-radius: 10px;
-	border: solid 2px;
-	border-color: white;
-	line-height: 70%;
-}
-
-p {
-	padding-left: 8px;
 }
 
 .formfn {
@@ -90,28 +110,3 @@ p {
 	margin: 4px;
 	padding: 4px;
 }
-
-body {
-	width: 960px;
-	height: auto;
-	display: block;
-	margin: auto;
-	z-index: -1;
-	background-image: url(bluesun.jpg);;
-	background-repeat: no-repeat;
-	background-color: #2C40A0;
-}
-
-header {
-	font-size: 56px;
-	font-family: 'Exo', sans-serif;
-	margin:8px;
-	padding: 20px 0 15px 0;
-
-}
-
-button {
-	margin-bottom: 12px;
-}
-
-

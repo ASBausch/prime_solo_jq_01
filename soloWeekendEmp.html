@@ -4,6 +4,7 @@
 	<title>Prime Solo Challenge Week 1 - Employee info form </title>
 		<link href='https://fonts.googleapis.com/css?family=Exo:400,800italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="soloWeekendStyle.css">
+
 </head>
 <body class="page">
 	<header>Blue Sun Corporation</header>
@@ -38,16 +39,34 @@
 			 	<input type="submit"></input><input type="reset"></input>
 			 	</div>
 		</form>
-		
+
 	</section>
-	<aside class="listing">
+	<aside>
+				<script id="employee-list" type="text/x-handlebars-template">
+<!-- The #each helper iterates over an array of items. -->
+					{{#each employees}}
+<!-- Here the context is each individual employee. So we can access its properties directly: -->
+					<ul>
+					<li>First Name: {{firstName}}</li>
+					<li>Last Name: {{lastName}}</li>
+					<li>Employee Number: {{empNum}}</li>
+					<li>Job Title: {{jobTitle}}</li>
+					<li>Last Review: {{lastRev}}</li>
+					<li>Salary: {{salary}}</li>
+					<button>Remove</button>
+					</ul>
+
 <!-- This is where the employee information will append to -->
-		
+					{{/each}}
+
+				</script>
 
 	</aside>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-</script>
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js"></script>
 	<script src='soloWeekendScripts.js'></script>
+
 </body>
 </html>
