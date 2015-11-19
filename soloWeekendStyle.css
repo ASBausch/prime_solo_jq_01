@@ -23,6 +23,11 @@ button {
 	margin: 12px 0 4px 0;
 }
 
+aside {
+	float:right;
+	width: 50%;
+}
+
 ul {
 		float: right;
 		background-color: #81A7D3;
