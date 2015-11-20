@@ -32,13 +32,9 @@ $(document).ready(function() {
 			var compiledHtml = theTemplate({employees: employeeArray});
 			$('aside').html(compiledHtml);
 			console.log(employeeArray);
-
-			$('button').on('click', function(){
-				$('button').remove("ul");
 			});
+		});
+
+			$('aside').on('click', 'button', function(){
+				$(this).parent().remove();
 	});
-
-
-
-
-});
